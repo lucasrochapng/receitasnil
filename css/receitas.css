@@ -177,4 +177,7 @@ h3 {
     text-decoration:line-through;
 }
 
-
+#dica {
+    color: rgb(165, 77, 42);
+    font-style: italic;
+}
