@@ -68,7 +68,17 @@ document.addEventListener('DOMContentLoaded', function() {
     iconBolo.classList.add('bx', 'bxs-cake');
 
     const iconCarne = document.createElement('i');
-    iconCarne.classList.add('bx', 'bxs-pear');
+    iconCarne.classList.add('fa-solid', 'fa-drumstick-bite');
+
+    const iconConserva = document.createElement('i');
+    iconConserva.classList.add('fa-solid', 'fa-jar');
+
+    // const iconDoce = document.createElement('i');
+    // iconDoce.classList.add('fa-solid', 'fa-ice-cream');
+
+    const iconDoce = document.createElement('img');
+    iconDoce.src = '../icons/doce.png';
+
   
     // Criando a janela modal
     const modal = document.createElement('div');
@@ -157,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const opcaoDoce = document.createElement('div');
     opcaoDoce.classList.add('opcao-filtro');
-    // opcaoDoce.appendChild(iconDoce);
+    opcaoDoce.appendChild(iconDoce);
     opcaoDoce.innerHTML += 'doces';
     opcaoDoce.addEventListener('click', () => {
         const doceCards = cards.filter(card => {
@@ -277,7 +287,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const opcaoConserva = document.createElement('div');
     opcaoConserva.classList.add('opcao-filtro');
-    // opcaoDoce.appendChild(iconDoce);
+    opcaoConserva.appendChild(iconConserva);
     opcaoConserva.innerHTML += 'conservas';
     opcaoConserva.addEventListener('click', () => {
         const conservaCards = cards.filter(card => {

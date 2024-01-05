@@ -237,7 +237,23 @@ input {
     border-radius: 50%;
 }
 
-.bx-sort-a-z {
+.opcao-filtro {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.opcao-filtro img {
+    width: 20px;
+    /* padding-right: 10px; */
+}
+
+.bx-sort-a-z, .bxs-cake, .bxs-pie-chart, .fa-drumstick-bite, .fa-jar, .fa-ice-cream {
+    font-size: 16px;
+    padding-right: 10px;
+}
+
+/* .bx-sort-a-z {
     font-size: 16px;
     padding-right: 10px;
 }
@@ -250,7 +266,7 @@ input {
 .bxs-pie-chart {
     font-size: 16px;
     padding-right: 10px;
-}
+} */
 
 .filtro-selecionado {
     color: rgb(255, 32, 117);
