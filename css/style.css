@@ -31,6 +31,7 @@ h2, h3, p {
     /* justify-content: space-between; */
     align-items: center;
     padding: 10px 10px 10px 0;
+    width: 100vw;
 }
   
 /* .title {
@@ -43,22 +44,22 @@ h2, h3, p {
     font-family: "Poppins", sans-serif;
 } */
 .title {
-    width: 10%;
+    width: 15%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .title img {
-    width: 24px;
-    height: 24px;
+    width: 35px;
+    height: 35px;
 }
 
 .filtro-pesquisa {
-    width: 90%;
+    width: 85%;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 
 .filtro-pesquisa input {
@@ -75,7 +76,7 @@ input:focus {
 }
 
 .filtro-pesquisa input::placeholder {
-    color: rgba(255, 255, 255, 0.678);
+    color: #ffb8d3;
 }
 
 input {
