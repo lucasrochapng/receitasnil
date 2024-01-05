@@ -215,7 +215,7 @@ input {
     right: 0;
     background:#ff9ac1;
     color: white;
-    padding: 14px 15px 2px 15px;
+    padding: 60px 15px 2px 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     z-index: 9999;
     opacity: 0;
@@ -231,6 +231,15 @@ input {
 
 .modal .opcao-filtro {
     font-size: 20px;
+}
+
+.modal .menu {
+    font-size: 25px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    position: fixed;
+    top: 10px;
+    right: 188px;
 }
 
 .bx-x {

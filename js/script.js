@@ -319,6 +319,12 @@ document.addEventListener('DOMContentLoaded', function() {
         escolherFiltro.style.backgroundColor = '';
     });
   
+    // Criando titulo MENU
+    const tituloMenu = document.createElement('div');
+    tituloMenu.classList.add('menu');
+    tituloMenu.innerHTML += 'MENU';
+    modal.appendChild(tituloMenu);
+
     modal.appendChild(opcaoNome);
     modal.appendChild(opcaoBolo);
     modal.appendChild(opcaoCarne);
@@ -387,6 +393,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const iconFechar = document.createElement('i');
     iconFechar.classList.add('bx', 'bx-x');
     modal.appendChild(iconFechar);
+
+    
+
 
     // Fechar a Modal no X
     iconFechar.addEventListener('click', () => {
