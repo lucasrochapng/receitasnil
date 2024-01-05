@@ -58,28 +58,39 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   
     // Ícones
-    const iconNome = document.createElement('i');
-    iconNome.classList.add('bx', 'bx-sort-a-z');
+    const iconNome = document.createElement('img');
+    iconNome.src = "icons/menu.png";
   
-    // const iconTorta = document.createElement('i');
-    // iconTorta.classList.add('bx', 'bxs-pie-chart');
     const iconTorta = document.createElement('img');
     iconTorta.src = "icons/torta.png";
 
-    const iconBolo = document.createElement('i');
-    iconBolo.classList.add('bx', 'bxs-cake');
+    const iconBolo = document.createElement('img');
+    iconBolo.src = "icons/bolo.png";
 
-    const iconCarne = document.createElement('i');
-    iconCarne.classList.add('fa-solid', 'fa-drumstick-bite');
+    const iconCarne = document.createElement('img');
+    iconCarne.src = "icons/carne.png";
 
-    const iconConserva = document.createElement('i');
-    iconConserva.classList.add('fa-solid', 'fa-jar');
-
-    // const iconDoce = document.createElement('i');
-    // iconDoce.classList.add('fa-solid', 'fa-ice-cream');
+    const iconConserva = document.createElement('img');
+    iconConserva.src = "icons/conserva.png";
 
     const iconDoce = document.createElement('img');
     iconDoce.src = "icons/doce.png";
+
+    const iconMassa = document.createElement('img');
+    iconMassa.src = "icons/massa.png";
+
+    const iconMolho = document.createElement('img');
+    iconMolho.src = "icons/molho.png";
+
+    const iconPao = document.createElement('img');
+    iconPao.src = "icons/pao.png";
+
+    const iconSobremesa = document.createElement('img');
+    iconSobremesa.src = "icons/sobremesa.png";
+
+    const iconSalgado = document.createElement('img');
+    iconSalgado.src = "icons/salgado.png";
+
     
 
   
@@ -190,7 +201,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const opcaoPao = document.createElement('div');
     opcaoPao.classList.add('opcao-filtro');
-    // opcaoDoce.appendChild(iconDoce);
+    opcaoPao.appendChild(iconPao);
     opcaoPao.innerHTML += 'pães';
     opcaoPao.addEventListener('click', () => {
         const paoCards = cards.filter(card => {
@@ -210,7 +221,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const opcaoSobremesa = document.createElement('div');
     opcaoSobremesa.classList.add('opcao-filtro');
-    // opcaoDoce.appendChild(iconDoce);
+    opcaoSobremesa.appendChild(iconSobremesa);
     opcaoSobremesa.innerHTML += 'sobremesas';
     opcaoSobremesa.addEventListener('click', () => {
         const sobremesaCards = cards.filter(card => {
@@ -230,7 +241,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const opcaoSalgado = document.createElement('div');
     opcaoSalgado.classList.add('opcao-filtro');
-    // opcaoDoce.appendChild(iconDoce);
+    opcaoSalgado.appendChild(iconSalgado);
     opcaoSalgado.innerHTML += 'salgados';
     opcaoSalgado.addEventListener('click', () => {
         const salgadoCards = cards.filter(card => {
@@ -250,7 +261,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const opcaoMassa = document.createElement('div');
     opcaoMassa.classList.add('opcao-filtro');
-    // opcaoDoce.appendChild(iconDoce);
+    opcaoMassa.appendChild(iconMassa);
     opcaoMassa.innerHTML += 'massas';
     opcaoMassa.addEventListener('click', () => {
         const massaCards = cards.filter(card => {
@@ -270,7 +281,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const opcaoMolho = document.createElement('div');
     opcaoMolho.classList.add('opcao-filtro');
-    // opcaoDoce.appendChild(iconDoce);
+    opcaoMolho.appendChild(iconMolho);
     opcaoMolho.innerHTML += 'molhos';
     opcaoMolho.addEventListener('click', () => {
         const molhoCards = cards.filter(card => {
