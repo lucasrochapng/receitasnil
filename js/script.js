@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // iconDoce.classList.add('fa-solid', 'fa-ice-cream');
 
     const iconDoce = document.createElement('img');
-    iconDoce.src = "icons/doce4.png";
+    iconDoce.src = "icons/doce.png";
     
 
   
