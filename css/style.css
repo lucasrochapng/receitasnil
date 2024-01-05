@@ -65,7 +65,7 @@ input:focus {
 }
 
 .filtro-pesquisa input::placeholder {
-    color: rgb(255, 255, 255);
+    color: rgba(255, 255, 255, 0.678);
 }
 
 input {
@@ -76,7 +76,7 @@ input {
 .escolher-filtro {
     display: flex;
     height: 37px;
-    color: #ff7aad;
+    color: #ffffff;
     border-radius: 4px;
     padding-left: 1px;
     padding-right: 5px;
@@ -140,6 +140,7 @@ input {
     color: #333;
     font-size: 20px;
     font-weight: bold;
+    margin-bottom: -5px;
 }
 
 .card-infos p {
@@ -150,7 +151,7 @@ input {
 
 .card-infos a {
     color: rgb(32, 136, 255);
-    font-size: 16px;
+    font-size: 18px;
     text-decoration: none;
 }
 
@@ -170,7 +171,7 @@ input {
 
 .card-link i {
     color: rgb(32, 136, 255);
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: -2px;
 }
 
@@ -180,7 +181,7 @@ input {
 
 /*! filtros ------------------------------------- */
 
-.modal {
+/* .modal {
     position: fixed;
     top: 50px;
     left: 133px;
@@ -189,14 +190,51 @@ input {
     padding: 7px 15px 2px 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     z-index: 9999;
-
     opacity: 0;
     animation: openFiltro 0.3s ease forwards;
-
 
     > div {
         margin-bottom: 5px;
     }
+} */
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background:#ff9ac1;
+    color: white;
+    padding: 14px 15px 2px 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    opacity: 0;
+    animation: openFiltro 0.3s ease forwards;
+    width: 70%;
+    height: 100vh;
+    /* font-size: 30px; */
+
+    > div {
+        margin-bottom: 5px;
+    }
+}
+
+.modal .opcao-filtro {
+    font-size: 20px;
+}
+
+.bx-x {
+    cursor: pointer;
+    font-size: 40px;
+    position: fixed;
+    top: 8px;
+    right: 7px;
+    border-radius: 50%;
+
+}
+
+.bx-x:hover {
+    background-color: rgba(0, 0, 0, 0.199);
+    border-radius: 50%;
 }
 
 .bx-sort-a-z {

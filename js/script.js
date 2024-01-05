@@ -61,11 +61,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const iconNome = document.createElement('i');
     iconNome.classList.add('bx', 'bx-sort-a-z');
   
-    const iconInteresse = document.createElement('i');
-    iconInteresse.classList.add('bx', 'bxs-pie-chart');
+    const iconTorta = document.createElement('i');
+    iconTorta.classList.add('bx', 'bxs-pie-chart');
 
     const iconBolo = document.createElement('i');
     iconBolo.classList.add('bx', 'bxs-cake');
+
+    const iconCarne = document.createElement('i');
+    iconCarne.classList.add('bx', 'bxs-pear');
   
     // Criando a janela modal
     const modal = document.createElement('div');
@@ -76,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const opcaoNome = document.createElement('div');
     opcaoNome.classList.add('opcao-filtro');
     opcaoNome.appendChild(iconNome); // Adiciona o ícone ao lado da frase
-    opcaoNome.innerHTML += 'ordem alfabética';
+    opcaoNome.innerHTML += 'todas receitas';
     opcaoNome.classList.add('filtro-selecionado');
     opcaoNome.addEventListener('click', () => {
         currentSorting = 'nome';
@@ -91,20 +94,20 @@ document.addEventListener('DOMContentLoaded', function() {
         escolherFiltro.style.backgroundColor = '';
     });
   
-    const opcaoInteresse = document.createElement('div');
-    opcaoInteresse.classList.add('opcao-filtro');
-    opcaoInteresse.appendChild(iconInteresse);
-    opcaoInteresse.innerHTML += 'tortas';
-    opcaoInteresse.addEventListener('click', () => {
-        const interesseCards = cards.filter(card => {
+    const opcaoTorta = document.createElement('div');
+    opcaoTorta.classList.add('opcao-filtro');
+    opcaoTorta.appendChild(iconTorta);
+    opcaoTorta.innerHTML += 'tortas';
+    opcaoTorta.addEventListener('click', () => {
+        const tortaCards = cards.filter(card => {
             const statusText = card.querySelector('#statusReceita').textContent;
             return statusText === 'torta';
         });
   
         modal.style.display = 'none'; // Esconde a janela modal após selecionar uma opção
         limparSelecaoFiltros();
-        opcaoInteresse.classList.add('filtro-selecionado');
-        atualizarCardsFiltrados(interesseCards);
+        opcaoTorta.classList.add('filtro-selecionado');
+        atualizarCardsFiltrados(tortaCards);
 
         // Restaura a classe do ícone do filtro ao selecionar uma opção na modal
         filtroIcon.classList.remove('bxs-up-arrow');
@@ -130,11 +133,179 @@ document.addEventListener('DOMContentLoaded', function() {
         filtroIcon.classList.remove('bxs-up-arrow');
         filtroIcon.classList.add('bxs-filter');
         escolherFiltro.style.backgroundColor = '';
-    })
+    });
+
+    const opcaoCarne = document.createElement('div');
+    opcaoCarne.classList.add('opcao-filtro');
+    opcaoCarne.appendChild(iconCarne);
+    opcaoCarne.innerHTML += 'carnes';
+    opcaoCarne.addEventListener('click', () => {
+        const carneCards = cards.filter(card => {
+            const statusText = card.querySelector('#statusReceita').textContent;
+            return statusText === 'carne';
+        });
+
+        modal.style.display = 'none';
+        limparSelecaoFiltros();
+        opcaoCarne.classList.add('filtro-selecionado');
+        atualizarCardsFiltrados(carneCards);
+
+        filtroIcon.classList.remove('bxs-up-arrow');
+        filtroIcon.classList.add('bxs-filter');
+        escolherFiltro.style.backgroundColor = '';
+    });
+
+    const opcaoDoce = document.createElement('div');
+    opcaoDoce.classList.add('opcao-filtro');
+    // opcaoDoce.appendChild(iconDoce);
+    opcaoDoce.innerHTML += 'doces';
+    opcaoDoce.addEventListener('click', () => {
+        const doceCards = cards.filter(card => {
+            const statusText = card.querySelector('#statusReceita').textContent;
+            return statusText === 'doce';
+        });
+
+        modal.style.display = 'none';
+        limparSelecaoFiltros();
+        opcaoDoce.classList.add('filtro-selecionado');
+        atualizarCardsFiltrados(doceCards);
+
+        filtroIcon.classList.remove('bxs-up-arrow');
+        filtroIcon.classList.add('bxs-filter');
+        escolherFiltro.style.backgroundColor = '';
+    });
+
+    const opcaoPao = document.createElement('div');
+    opcaoPao.classList.add('opcao-filtro');
+    // opcaoDoce.appendChild(iconDoce);
+    opcaoPao.innerHTML += 'pães';
+    opcaoPao.addEventListener('click', () => {
+        const paoCards = cards.filter(card => {
+            const statusText = card.querySelector('#statusReceita').textContent;
+            return statusText === 'pão';
+        });
+
+        modal.style.display = 'none';
+        limparSelecaoFiltros();
+        opcaoPao.classList.add('filtro-selecionado');
+        atualizarCardsFiltrados(paoCards);
+
+        filtroIcon.classList.remove('bxs-up-arrow');
+        filtroIcon.classList.add('bxs-filter');
+        escolherFiltro.style.backgroundColor = '';
+    });
+
+    const opcaoSobremesa = document.createElement('div');
+    opcaoSobremesa.classList.add('opcao-filtro');
+    // opcaoDoce.appendChild(iconDoce);
+    opcaoSobremesa.innerHTML += 'sobremesas';
+    opcaoSobremesa.addEventListener('click', () => {
+        const sobremesaCards = cards.filter(card => {
+            const statusText = card.querySelector('#statusReceita').textContent;
+            return statusText === 'sobremesa';
+        });
+
+        modal.style.display = 'none';
+        limparSelecaoFiltros();
+        opcaoSobremesa.classList.add('filtro-selecionado');
+        atualizarCardsFiltrados(sobremesaCards);
+
+        filtroIcon.classList.remove('bxs-up-arrow');
+        filtroIcon.classList.add('bxs-filter');
+        escolherFiltro.style.backgroundColor = '';
+    });
+
+    const opcaoSalgado = document.createElement('div');
+    opcaoSalgado.classList.add('opcao-filtro');
+    // opcaoDoce.appendChild(iconDoce);
+    opcaoSalgado.innerHTML += 'salgados';
+    opcaoSalgado.addEventListener('click', () => {
+        const salgadoCards = cards.filter(card => {
+            const statusText = card.querySelector('#statusReceita').textContent;
+            return statusText === 'salgado';
+        });
+
+        modal.style.display = 'none';
+        limparSelecaoFiltros();
+        opcaoSalgado.classList.add('filtro-selecionado');
+        atualizarCardsFiltrados(salgadoCards);
+
+        filtroIcon.classList.remove('bxs-up-arrow');
+        filtroIcon.classList.add('bxs-filter');
+        escolherFiltro.style.backgroundColor = '';
+    });
+
+    const opcaoMassa = document.createElement('div');
+    opcaoMassa.classList.add('opcao-filtro');
+    // opcaoDoce.appendChild(iconDoce);
+    opcaoMassa.innerHTML += 'massas';
+    opcaoMassa.addEventListener('click', () => {
+        const massaCards = cards.filter(card => {
+            const statusText = card.querySelector('#statusReceita').textContent;
+            return statusText === 'massa';
+        });
+
+        modal.style.display = 'none';
+        limparSelecaoFiltros();
+        opcaoMassa.classList.add('filtro-selecionado');
+        atualizarCardsFiltrados(massaCards);
+
+        filtroIcon.classList.remove('bxs-up-arrow');
+        filtroIcon.classList.add('bxs-filter');
+        escolherFiltro.style.backgroundColor = '';
+    });
+
+    const opcaoMolho = document.createElement('div');
+    opcaoMolho.classList.add('opcao-filtro');
+    // opcaoDoce.appendChild(iconDoce);
+    opcaoMolho.innerHTML += 'molhos';
+    opcaoMolho.addEventListener('click', () => {
+        const molhoCards = cards.filter(card => {
+            const statusText = card.querySelector('#statusReceita').textContent;
+            return statusText === 'molho';
+        });
+
+        modal.style.display = 'none';
+        limparSelecaoFiltros();
+        opcaoMolho.classList.add('filtro-selecionado');
+        atualizarCardsFiltrados(molhoCards);
+
+        filtroIcon.classList.remove('bxs-up-arrow');
+        filtroIcon.classList.add('bxs-filter');
+        escolherFiltro.style.backgroundColor = '';
+    });
+
+    const opcaoConserva = document.createElement('div');
+    opcaoConserva.classList.add('opcao-filtro');
+    // opcaoDoce.appendChild(iconDoce);
+    opcaoConserva.innerHTML += 'conservas';
+    opcaoConserva.addEventListener('click', () => {
+        const conservaCards = cards.filter(card => {
+            const statusText = card.querySelector('#statusReceita').textContent;
+            return statusText === 'conserva';
+        });
+
+        modal.style.display = 'none';
+        limparSelecaoFiltros();
+        opcaoConserva.classList.add('filtro-selecionado');
+        atualizarCardsFiltrados(conservaCards);
+
+        filtroIcon.classList.remove('bxs-up-arrow');
+        filtroIcon.classList.add('bxs-filter');
+        escolherFiltro.style.backgroundColor = '';
+    });
   
     modal.appendChild(opcaoNome);
-    modal.appendChild(opcaoInteresse);
     modal.appendChild(opcaoBolo);
+    modal.appendChild(opcaoCarne);
+    modal.appendChild(opcaoConserva);
+    modal.appendChild(opcaoDoce);
+    modal.appendChild(opcaoMassa);
+    modal.appendChild(opcaoMolho);
+    modal.appendChild(opcaoPao);
+    modal.appendChild(opcaoSalgado);
+    modal.appendChild(opcaoSobremesa);
+    modal.appendChild(opcaoTorta);
   
     // Função para atualizar os cards exibidos com base no filtro aplicado
     function atualizarCardsFiltrados(filteredCards) {
@@ -187,8 +358,24 @@ document.addEventListener('DOMContentLoaded', function() {
         escolherFiltro.style.backgroundColor = 'transparent'; // Remove o background de sombra
       }
     });
+
+    // Criar o ícone de fechar (X)
+    const iconFechar = document.createElement('i');
+    iconFechar.classList.add('bx', 'bx-x');
+    modal.appendChild(iconFechar);
+
+    // Fechar a Modal no X
+    iconFechar.addEventListener('click', () => {
+      modal.style.display = 'none';
+      modalVisivel = false;
+      filtroIcon.classList.remove('bxs-up-arrow');
+      filtroIcon.classList.add('bxs-filter');
+      escolherFiltro.style.backgroundColor = 'transparent';
+    });
+
   
     // Inicialmente, ordenar os cards por ano
     mostrarCardsOrdenados();
   });
+
 
