@@ -61,8 +61,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const iconNome = document.createElement('i');
     iconNome.classList.add('bx', 'bx-sort-a-z');
   
-    const iconTorta = document.createElement('i');
-    iconTorta.classList.add('bx', 'bxs-pie-chart');
+    // const iconTorta = document.createElement('i');
+    // iconTorta.classList.add('bx', 'bxs-pie-chart');
+    const iconTorta = document.createElement('img');
+    iconTorta.src = "icons/torta.png";
 
     const iconBolo = document.createElement('i');
     iconBolo.classList.add('bx', 'bxs-cake');
