@@ -77,7 +77,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // iconDoce.classList.add('fa-solid', 'fa-ice-cream');
 
     const iconDoce = document.createElement('img');
-    iconDoce.src = '../icons/doce2.png';
+    iconDoce.src = '../icons/doce.png';
+    iconDoce.onerror = function() {
+      console.log('Erro ao carregar a imagem!');
+  };
 
   
     // Criando a janela modal
